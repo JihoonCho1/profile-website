@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff6e4;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 430px; 
+  background-color: #fff6e4; 
+  box-sizing: border-box;  
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2, p {
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+

@@ -1,0 +1,47 @@
+.banner-wrapper {
+    width: 100%;
+    min-height: 160px;
+
+    background-image: url('../assets/matchavibebanner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 95% 100%;
+    image-rendering: pixelated;
+    
+    box-sizing: border-box;
+    margin-top: 1rem;
+    padding: 24px 28px;
+   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text-field {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+    color: #fbf7ef;
+}
+
+.text-field p {
+    font-size: 1.15rem;
+}
+
+.link-wrapper {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.pixel-icon {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-bottom: 5px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  cursor: pointer;
+}
