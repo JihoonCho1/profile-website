@@ -8,13 +8,14 @@ import toggleOff from '../assets/toggleoff.png';
 function WorkStyleBanner() {
     const [habits, setHabits] = useState({
         A: true,    // Daily Commit
-        B: false,   // Clean Comments
-        C: false    // "Oh it works on mine?"
+        B: true,   // Clean Comments
+        C: false,    // "Oh it works on mine?"
+        D: false,   // Crash out
     });
 
     const toggleHabits = (key) => {
         setHabits((prev) => {
-            if (prev.C && (key === 'A' || key === 'B')) {
+            if ((prev.D || prev.C) && (key === 'A' || key === 'B')) {
                 return prev;
             }
 
@@ -24,9 +25,10 @@ function WorkStyleBanner() {
                 return { ...prev, [key]: false };
             }
 
-            if (key === 'A') return { ...prev, A: true, B: false};
-            if (key === 'B') return { ...prev, A: false, B: true};
-            if (key === 'C') return { ...prev, A: false, B: false, C: true};
+            if (key === 'A') return { ...prev, A: true};
+            if (key === 'B') return { ...prev, B: true};
+            if (key === 'C') return { ...prev, A: false, B: false, C: true, D: true};
+            if (key === 'D') return { ...prev, A: false, B: false, D: true};
 
             return prev;
         });
@@ -67,7 +69,17 @@ function WorkStyleBanner() {
                 />
                 </button>
             </div>
-            
+            {/* Crash out */}
+            <div className="toggle-box">
+                <p>- Crash Out</p>
+                <button className="toggle-button" onClick={() => toggleHabits('D')}>
+                <img 
+                    src={habits.D ? toggleOn : toggleOff} 
+                    alt={habits.D ? "ON" : "OFF"} 
+                    className="toggle-img"
+                />
+                </button>
+            </div>
         </div>
     )
 }
