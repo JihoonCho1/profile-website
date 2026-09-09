@@ -1,0 +1,56 @@
+.toggle-banner-wrapper {
+    width: 100%;
+    min-height: 200px;
+
+    background-image: url('../assets/workstylebanner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 95% 100%;
+    image-rendering: pixelated;
+    
+    box-sizing: border-box;
+    margin-top: 1rem;
+    padding: 24px 28px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.toggle-banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toggle-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.toggle-box p {
+    padding-top: 30px;
+    margin: 0;
+    color: #fbf7ef;
+}
+
+.toggle-button {
+    display: flex;
+    padding-top: 30px;
+    width: 70px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-img {
+    width: 60px;
+    height: auto;
+}
