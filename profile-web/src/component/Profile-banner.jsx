@@ -10,7 +10,7 @@ const ProfileBanner = () => {
                 <p>Role: Frontend/Backend</p>
                 <div className="link-wrapper">
                 <p>Resume:{' '}
-                    <a href="public/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                         <img 
                         src={resume}
                         alt="resume"
