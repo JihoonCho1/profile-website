@@ -31,13 +31,7 @@ const ProfileBanner = () => {
                 </div>
                 
             </div>
-            <div className="coffee-bar">
-                    <img 
-                        src={coffeeBar}
-                        alt="coffee-level"
-                        className="coffee-level"
-                    />
-                </div>
+
         </div>
     )
 }

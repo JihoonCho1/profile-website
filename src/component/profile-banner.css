@@ -1,6 +1,6 @@
 .banner-wrapper {
     width: 100%;
-    min-height: 210px;
+    min-height: 180px;
 
     background-image: url('../assets/matchavibebanner.png');
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 .text-field {
     display: flex;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-left: 100px;
     flex-direction: column;
     gap: 8px;
