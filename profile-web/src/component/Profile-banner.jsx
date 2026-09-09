@@ -18,11 +18,13 @@ const ProfileBanner = () => {
                     
                 </p>
                 <p>Github:{' '} 
-                    <img 
-                      src={githubIcon}
-                      alt="Github"
-                      className="pixel-icon"
-                    />
+                    <a href="https://github.com/JihoonCho1">
+                        <img 
+                        src={githubIcon}
+                        alt="Github"
+                        className="pixel-icon"
+                        />
+                    </a>
                 </p>
                 
                 </div>
