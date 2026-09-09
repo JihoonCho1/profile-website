@@ -9,16 +9,17 @@ const ProfileBanner = () => {
                 <p>Name: Jihoon Choi</p>
                 <p>Role: Frontend/Backend</p>
                 <div className="link-wrapper">
-                <p>Resume:
-                    <img 
-                      src={resume}
-                      alt="resume"
-                      className="pixel-icon"
-                    />
-                    
+                <p>Resume:{' '}
+                    <a href="public/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <img 
+                        src={resume}
+                        alt="resume"
+                        className="pixel-icon"
+                        />
+                    </a>
                 </p>
                 <p>Github:{' '} 
-                    <a href="https://github.com/JihoonCho1">
+                    <a href="https://github.com/JihoonCho1" target="_blank" rel="noopener noreferrer">
                         <img 
                         src={githubIcon}
                         alt="Github"
