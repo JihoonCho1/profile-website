@@ -1,6 +1,7 @@
 import './profile-banner.css'
 import resume from '../assets/resume.png'
 import githubIcon from '../assets/github-icon.png'
+import coffeeBar from '../assets/caffeine-bar.png'
 
 const ProfileBanner = () => {
     return (
@@ -26,10 +27,17 @@ const ProfileBanner = () => {
                         className="pixel-icon"
                         />
                     </a>
-                </p>
-                
+                </p>                
                 </div>
+                
             </div>
+            <div className="coffee-bar">
+                    <img 
+                        src={coffeeBar}
+                        alt="coffee-level"
+                        className="coffee-level"
+                    />
+                </div>
         </div>
     )
 }
