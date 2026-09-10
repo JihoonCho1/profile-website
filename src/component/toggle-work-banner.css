@@ -11,13 +11,13 @@
     
     box-sizing: border-box;
     margin-top: 1rem;
-    padding: clamp(16px, 4vw, 28px);
+    padding: 42px 28px 24px 28px;
    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
 }
 
 .toggle-box {
@@ -41,7 +41,7 @@
 
 .toggle-button {
     display: flex;
-    width: 50px;
+    width: 55px;
     height: auto;
     margin: 10px 15px 0 0;
     align-items: center;
@@ -61,12 +61,12 @@
 
 @media (max-width: 375px) {
     .toggle-banner-wrapper {
-        padding: 16px;
+        padding: 36px 18px 20px 18px;
         gap: 8px;
     }
 
     .toggle-button {
-        width: 40px;
+        width: 45px;
         height: auto;
     }
 }
