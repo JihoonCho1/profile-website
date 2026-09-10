@@ -12,7 +12,7 @@ const ProfileBanner = () => {
             </div>
             <div className="text-field">
                 <p>Name: Jihoon Choi</p>
-                <p>Role: Frontend/Backend</p>
+                <p>Role: Software Engineer</p>
                 <div className="link-wrapper">
                     <div className="icon-wrapper">
                     <p>Resume:</p>
