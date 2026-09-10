@@ -21,6 +21,7 @@
 }
 
 .profile-picture {
+    margin-top: 20px;
     width: 80px;
     max-width: 25%;
     height: auto;
@@ -37,7 +38,7 @@
 
 .text-field {
     display: flex;
-    margin: 0;                  
+    margin: 20px 0 0 0;                  
     flex-direction: column;
     gap: 6px;
     text-align: left;
@@ -67,13 +68,22 @@
     cursor: pointer;
 }
 
-.coffee-level {
-    width: 100%;
-    max-width: 240px;
-    height: auto;
-    image-rendering: pixelated;
-    margin-top: 6px;
-    object-fit: contain;
+.resume-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.resume-wrapper p {
+    color: #fbf7ef;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    margin: 0;
+    line-height: 1;
+}
+
+.resume-wrapper a {
+    display: inline-flex;
+    align-items: center;
 }
 
 @media (max-width: 375px) {

@@ -14,15 +14,18 @@ const ProfileBanner = () => {
                 <p>Name: Jihoon Choi</p>
                 <p>Role: Frontend/Backend</p>
                 <div className="link-wrapper">
-                <p>Resume:{' '}
-                    <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                        <img 
-                        src={resume}
-                        alt="resume"
-                        className="pixel-icon"
-                        />
-                    </a>
-                </p>
+                    <div className="resume-wrapper">
+                    <p>Resume:{' '}
+                        <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <img 
+                            src={resume}
+                            alt="resume"
+                            className="pixel-icon"
+                            />
+                        </a>
+                    </p>
+                    </div>
+                <div className="github-wrapper">
                 <p>Github:{' '} 
                     <a href="https://github.com/JihoonCho1" target="_blank" rel="noopener noreferrer">
                         <img 
@@ -31,8 +34,9 @@ const ProfileBanner = () => {
                         className="pixel-icon"
                         />
                     </a>
-                </p>                
+                </p>  
                 </div>
+            </div>
                 
             </div>
 
