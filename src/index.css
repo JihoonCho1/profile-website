@@ -53,6 +53,10 @@
 body {
   margin: 0;
 }
+/* index.css 또는 App.css 최상위 레이아웃 */
+body, #root {
+  min-width: 280px; /* 화면이 아무리 줄어들어도 280px 밑으로는 레이아웃이 찌그러지지 않고 스크롤바 생성 */
+}
 
 #root {
   width: 1126px;
