@@ -14,8 +14,8 @@ const ProfileBanner = () => {
                 <p>Name: Jihoon Choi</p>
                 <p>Role: Frontend/Backend</p>
                 <div className="link-wrapper">
-                    <div className="resume-wrapper">
-                    <p>Resume:{' '}
+                    <div className="icon-wrapper">
+                    <p>Resume:</p>
                         <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
                             <img 
                             src={resume}
@@ -23,10 +23,9 @@ const ProfileBanner = () => {
                             className="pixel-icon"
                             />
                         </a>
-                    </p>
                     </div>
-                <div className="github-wrapper">
-                <p>Github:{' '} 
+                <div className="icon-wrapper">
+                <p>Github:</p>
                     <a href="https://github.com/JihoonCho1" target="_blank" rel="noopener noreferrer">
                         <img 
                         src={githubIcon}
@@ -34,7 +33,6 @@ const ProfileBanner = () => {
                         className="pixel-icon"
                         />
                     </a>
-                </p>  
                 </div>
             </div>
                 

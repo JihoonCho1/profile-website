@@ -55,35 +55,36 @@
 }
 
 .link-wrapper {
-    display: inline-flex;
-    gap: 10px;
+    display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.pixel-icon {
-    width: 24px;
-    height: 24px;
-    image-rendering: pixelated;
-    object-fit: contain;
-    cursor: pointer;
-}
-
-.resume-wrapper {
+.icon-wrapper {
     display: inline-flex;
     align-items: center;
     gap: 4px;
 }
 
-.resume-wrapper p {
+.icon-wrapper p {
     color: #fbf7ef;
     font-size: clamp(0.9rem, 3.5vw, 1.1rem);
     margin: 0;
     line-height: 1;
 }
 
-.resume-wrapper a {
+.icon-wrapper a {
     display: inline-flex;
     align-items: center;
+}
+
+.pixel-icon {
+    width: 20px;
+    height: 20px;    
+    image-rendering: pixelated;
+    object-fit: contain;
+    cursor: pointer;
+    display: block;
 }
 
 @media (max-width: 375px) {
