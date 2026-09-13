@@ -8,6 +8,7 @@
     background-position: center center;
     background-size: 95% 100%;
     image-rendering: pixelated;
+
     
     box-sizing: border-box;
     margin-top: 1rem;
@@ -92,6 +93,7 @@
     .banner-wrapper {
         padding: 50px;
         gap: 28px;
+        max-height: 280px;
     }
 
     .profile-picture {
