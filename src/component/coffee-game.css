@@ -22,7 +22,7 @@
 
 .caffeine-level {
     margin: 0;
-    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    font-size: clamp(0.95rem, 3vw, 0.95rem);
     color: #fbf7ef;
     text-shadow: 1px 1px 0px #000;
     font-family: "Pixelify Sans", sans-serif;
@@ -44,7 +44,7 @@
     width: 100%;
     text-align: center;
     margin: 0;
-    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    font-size: clamp(0.95rem, 3vw, 0.95rem);
     color: #fbf7ef;
     text-shadow: 1px 1px 0px #000;
 }
