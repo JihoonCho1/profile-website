@@ -38,6 +38,7 @@
     font-size: clamp(0.95rem, 3.5vw, 1.15rem);
     word-break: keep-all;
     min-width: 0;
+    text-shadow: 1px 1px 0px #000;
 }
 
 .toggle-button {
@@ -69,5 +70,9 @@
     .toggle-button {
         width: 45px;
         height: auto;
+    }
+
+    .progress-bar-img {
+        max-width: 260px;
     }
 }

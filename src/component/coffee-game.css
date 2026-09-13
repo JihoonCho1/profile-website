@@ -1,88 +1,123 @@
-.game-container {
+.coffee-game-wrapper {
     width: 100%;
-    max-width: 600px;
-    margin-top: 1rem;
+    max-width: 600px; 
+    min-height: 350px;
+
+    background-image: url('../assets/caffeinatemebanner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 95% 100%;
+    image-rendering: pixelated;
+    
     box-sizing: border-box;
+    padding: clamp(28px, 6vw, 40px) 20px 20px 20px;
+    margin-top: 1rem;
+    
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    color: #fbf7ef;
-}
-
-.bar-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.bar-header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    justify-content: center;
+    gap: 12px;
+}
+
+.caffeine-level {
+    margin: 0;
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    color: #fbf7ef;
+    text-shadow: 1px 1px 0px #000;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+
+.progress-bar-img {
+    width: 100%;
+    max-width: clamp(240px, 80vw, 300px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.hint-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: clamp(0.8rem, 3vw, 0.95rem);
+    color: #fbf7ef;
+    text-shadow: 1px 1px 0px #000;
+}
+
+
+.coffee-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 85%;
+}
+
+.coffee-slot {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+    will-change: transform, opacity;
+}
+
+.coffee-slot:hover {
+    transform: scale(1.3);
+}
+
+.coffee-slot:active {
+    transform: scale(0.8);
+}
+
+.coffee-slot.hidden {
+    opacity: 0;
+    transform: scale(0) rotate(45deg);
+    pointer-events: none;
+}
+
+.coffee-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+    pointer-events: none;
 }
 
 .reset-btn {
     background-color: #fbf7ef;
-    color: #2b2b2b;
+    color: #5c4233;
     border: none;
-    padding: 2px 8px;
+    padding: 4px 12px;
     cursor: pointer;
-    font-size: 0.8rem;
-    image-rendering: pixelated;
-}
-
-.gauge-frame {
-    width: 100%;
-    height: 20px;
-    border: 3px solid #fbf7ef;
-    background-color: #1a1a1a;
-    box-sizing: border-box;
-    padding: 2px;
-}
-
-.gauge-fill {
-    height: 100%;
-    background-color: #8b5a2b;
-    transition: width 0.2s ease-in-out;
-}
-
-.coffee-field {
-    text-align: center;
-    padding: 16px;
-    border: 2px dashed #fbf7ef;
-}
-
-.hint-text {
-    margin: 0 0 12px 0;
     font-size: 0.85rem;
-}
-
-.coffee-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.coffee-item {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
     image-rendering: pixelated;
-    cursor: pointer;
-    transition: transform 0.1s ease;
+    border-radius: 0.4rem;
+    border: solid 2px #5c4233;
+    margin-top: 4px;
+    font-family: "Pixelify Sans", sans-serif;
+
 }
 
-.coffee-item:hover {
-    transform: scale(1.15);
-}
+@media (max-width: 375px) {
+    .coffee-slot {
+        width: 30px;
+        height: 30px;
+    }
 
-.coffee-item:active {
-    transform: scale(0.95);
-}
-
-.coffee-item.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    .coffee-grid {
+        gap: 6px;
+        max-width: 95%;
+    }
 }
