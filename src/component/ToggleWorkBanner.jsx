@@ -1,5 +1,5 @@
 import './toggle-work-banner.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import toggleOn from '../assets/toggleon.png';
 import toggleOff from '../assets/toggleoff.png';
@@ -7,11 +7,13 @@ import toggleOff from '../assets/toggleoff.png';
 
 function WorkStyleBanner() {
     const [habits, setHabits] = useState({
-        A: true,    // Daily Commit
+        A: false,    // Daily Commit
         B: true,   // Clean Comments
         C: false,    // "Oh it works on mine?"
         D: false,   // Crash out
     });
+
+    const timerRef = useRef(null);
 
     const toggleHabits = (key) => {
         setHabits((prev) => {
@@ -22,13 +24,33 @@ function WorkStyleBanner() {
             const isTurningOn = !prev[key]
 
             if (!isTurningOn) {
+                if (key === 'C') {
+                    if (timerRef.current) {
+                        clearTimeout(timerRef.current);
+                        timerRef.current = null;
+                    }
+                    return { ...prev, C: false, D: false };
+                }
                 return { ...prev, [key]: false };
             }
 
-            if (key === 'A') return { ...prev, A: true};
-            if (key === 'B') return { ...prev, B: true};
-            if (key === 'C') return { ...prev, A: false, B: false, C: true, D: true};
-            if (key === 'D') return { ...prev, A: false, B: false, D: true};
+            if (key === 'A') return { ...prev, A: true, B: false};
+            if (key === 'B') return { ...prev, A: false, B: true};
+
+            if (key === 'C') {
+                if (timerRef.current) {
+                    clearTimeout(timerRef.current);
+                }
+
+                timerRef.current = setTimeout(() => {
+                    setHabits((current) => {
+                        if (!current) return current;
+                        return { ...current, A: false, B: false, D: true };
+                    });
+                }, 1000);
+
+                return { ...prev, C: true };
+            }
 
             return prev;
         });
@@ -60,7 +82,7 @@ function WorkStyleBanner() {
             </div>
             {/* It works on mine? */}
             <div className="toggle-box">
-                <p>- Say "Oh, it works on mine?"</p>
+                <p>- "Oh, it works on mine?"</p>
                 <button className="toggle-button" onClick={() => toggleHabits('C')}>
                 <img 
                     src={habits.C ? toggleOn : toggleOff} 
@@ -72,7 +94,7 @@ function WorkStyleBanner() {
             {/* Crash out */}
             <div className="toggle-box">
                 <p>- Crash Out</p>
-                <button className="toggle-button" onClick={() => toggleHabits('D')}>
+                <button className="toggle-button">
                 <img 
                     src={habits.D ? toggleOn : toggleOff} 
                     alt={habits.D ? "ON" : "OFF"} 
