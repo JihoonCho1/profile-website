@@ -4,6 +4,7 @@ import './App.css'
 import Header from './component/Header.jsx'
 import ProfileBanner from './component/Profile-banner.jsx'
 import WorkStyleBanner from './component/ToggleWorkBanner.jsx'
+import CoffeeGame from './component/CoffeeGame.jsx'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <ProfileBanner />
       <WorkStyleBanner />
+      <CoffeeGame />
     
     </div>
   )

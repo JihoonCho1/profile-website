@@ -1,0 +1,88 @@
+.game-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fbf7ef;
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.reset-btn {
+    background-color: #fbf7ef;
+    color: #2b2b2b;
+    border: none;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    image-rendering: pixelated;
+}
+
+.gauge-frame {
+    width: 100%;
+    height: 20px;
+    border: 3px solid #fbf7ef;
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.gauge-fill {
+    height: 100%;
+    background-color: #8b5a2b;
+    transition: width 0.2s ease-in-out;
+}
+
+.coffee-field {
+    text-align: center;
+    padding: 16px;
+    border: 2px dashed #fbf7ef;
+}
+
+.hint-text {
+    margin: 0 0 12px 0;
+    font-size: 0.85rem;
+}
+
+.coffee-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.coffee-item {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.coffee-item:hover {
+    transform: scale(1.15);
+}
+
+.coffee-item:active {
+    transform: scale(0.95);
+}
+
+.coffee-item.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
